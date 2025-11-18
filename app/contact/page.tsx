@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
 import Image from 'next/image';
+import { BoxedPageLayout } from '@/components/boxed-page-layout';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -77,7 +78,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <BoxedPageLayout>
       <style jsx global>{`
         .contact-heading-gradient {
           background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
@@ -447,6 +448,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-    </div>
+    </BoxedPageLayout>
   );
 }

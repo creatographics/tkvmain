@@ -1,6 +1,8 @@
+import { BoxedPageLayout } from '@/components/boxed-page-layout';
+
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <BoxedPageLayout>
       {/* Hero Section */}
       <section className="relative pt-28 pb-8">
         <div className="container mx-auto px-6 max-w-[800px]">
@@ -151,6 +153,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-    </div>
+    </BoxedPageLayout>
   );
 }

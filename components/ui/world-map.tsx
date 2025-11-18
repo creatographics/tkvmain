@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { motion } from "motion/react";
-import DottedMap from "dotted-map";
+import { motion } from "framer-motion";
+// import DottedMap from "dotted-map";
 
 import { useTheme } from "next-themes";
+
+const DottedMap: any = null;
 
 interface MapProps {
   dots?: Array<{

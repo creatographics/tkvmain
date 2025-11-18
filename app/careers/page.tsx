@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MapPin, Clock, ArrowRight, X } from 'lucide-react';
+import { BoxedPageLayout } from '@/components/boxed-page-layout';
 
 export default function CareersPage() {
   const [selectedDept, setSelectedDept] = useState('All');
@@ -130,7 +131,7 @@ export default function CareersPage() {
   const filtered = selectedDept === 'All' ? jobs : jobs.filter(j => j.dept === selectedDept);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <BoxedPageLayout>
       {/* Hero */}
       <section className="relative pt-32 md:pt-36 pb-20 overflow-hidden">
         <div className="max-w-[800px] mx-auto text-center">
@@ -411,6 +412,6 @@ export default function CareersPage() {
           </a>
         </div>
       </section>
-    </div>
+    </BoxedPageLayout>
   );
 }

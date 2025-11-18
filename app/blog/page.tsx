@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { BoxedPageLayout } from '@/components/boxed-page-layout';
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -106,8 +107,7 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-
+    <BoxedPageLayout>
       {/* Blog Header Section */}
       <header className="pt-32 md:pt-36 pb-12 md:pb-16 px-5">
         <div className="max-w-[1126px] mx-auto">
@@ -299,6 +299,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </div>
+    </BoxedPageLayout>
   );
 }

@@ -62,6 +62,7 @@ import {
   Sparkles as SparklesIcon
 } from "lucide-react";
 import Link from "next/link";
+import { BoxedPageLayout } from "@/components/boxed-page-layout";
 
 const servicesData = [
   {
@@ -317,7 +318,8 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <BoxedPageLayout includeFooter={false}>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#1D1711] px-4 pt-16 pb-12 md:pt-20 md:pb-14 lg:pt-24 lg:pb-16">
         <div className="container relative mx-auto max-w-6xl text-center">
@@ -710,6 +712,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </BoxedPageLayout>
   );
 }

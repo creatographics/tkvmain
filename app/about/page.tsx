@@ -4,8 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Calendar, Users, X, Briefcase, MapPin, Clock } from 'lucide-react';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
+import { BoxedPageLayout } from '@/components/boxed-page-layout';
 export default function AboutPage() {
   const [expandedValue, setExpandedValue] = useState<number | null>(null);
   const [selectedRole, setSelectedRole] = useState<any>(null);
@@ -342,7 +341,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <BoxedPageLayout>
       <style jsx global>{`
         .careers-heading-gradient {
           background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
@@ -476,9 +475,6 @@ export default function AboutPage() {
           opacity: 1;
         }
       `}</style>
-
-      {/* Header */}
-      <SiteHeader />
 
       <main>
         {/* Hero Section */}
@@ -791,8 +787,6 @@ export default function AboutPage() {
         </div>
 
       </main>
-
-      <SiteFooter />
-    </div>
+    </BoxedPageLayout>
   );
 }
